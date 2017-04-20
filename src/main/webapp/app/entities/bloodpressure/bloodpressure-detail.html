@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="healthApp.bloodpressure.detail.title">Bloodpressure</span> {{vm.bloodpressure.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="healthApp.bloodpressure.timestamp">Timestamp</span></dt>
+        <dd>
+            <span>{{vm.bloodpressure.timestamp | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="healthApp.bloodpressure.systolic">Systolic</span></dt>
+        <dd>
+            <span>{{vm.bloodpressure.systolic}}</span>
+        </dd>
+        <dt><span data-translate="healthApp.bloodpressure.diastolic">Diastolic</span></dt>
+        <dd>
+            <span>{{vm.bloodpressure.diastolic}}</span>
+        </dd>
+        <dt><span data-translate="healthApp.bloodpressure.user">User</span></dt>
+        <dd>
+            {{vm.bloodpressure.user.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bloodpressure-detail.edit({id:vm.bloodpressure.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
