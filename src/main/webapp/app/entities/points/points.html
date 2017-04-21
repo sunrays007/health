@@ -4,11 +4,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-7">
+<<<<<<< HEAD
                 <h2 data-translate="healthApp.points.home.title">Points</h2>
+=======
+                <h2 translate="healthApp.points.home.title">Points</h2>
+>>>>>>> 2d1e8ac080ae0bd6e5ee9bf2d55f1453adc92513
             </div>
             <div class="col-sm-5 text-right p-n">
                 <form name="searchForm" class="form-inline">
                     <div class="form-group m-n">
+<<<<<<< HEAD
                         <input type="search" class="form-control" ng-model="vm.searchQuery" id="searchQuery"
                                placeholder="{{'entity.action.search' | translate}}">
                     </div>
@@ -21,6 +26,23 @@
                     </button>
                     <button class="btn btn-primary btn-sm btn-raised" ui-sref="points.new"
                             uib-tooltip="{{'entity.action.new' | translate}}">
+=======
+                        <input type="search" class="form-control" ng-model="vm.searchQuery" id=
+                            "searchQuery"
+                               placeholder="{{'healthApp.points.home.search' | translate}}">
+                    </div>
+                    <button class="btn btn-info btn-sm" ng-click="vm.clear()" ng-if=
+                        "vm.currentSearch">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <button class="btn btn-info btn-sm btn-raised" ng-click=
+                        "vm.search(vm.searchQuery)"
+                            uib-tooltip="{{'healthApp.points.home.search' | translate}}">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    <button class="btn btn-primary btn-sm btn-raised" ui-sref="points.new"
+                            uib-tooltip="{{'healthApp.points.home.new' | translate}}">
+>>>>>>> 2d1e8ac080ae0bd6e5ee9bf2d55f1453adc92513
                         <span class="glyphicon glyphicon-plus"></span>
                     </button>
                 </form>
@@ -38,13 +60,17 @@
                     <th jh-sort-by="alcolhol"><span data-translate="healthApp.points.alcolhol">Alcolhol</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="notes"><span data-translate="healthApp.points.notes">Notes</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="User.login"><span data-translate="healthApp.points.User">User</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
             <tr ng-repeat="points in vm.points track by points.id">
+<<<<<<< HEAD
                 <td class="text-nowrap"><a ui-sref="points-detail({id:points.id})">{{points.date |
                     date:'mediumDate'}}</a></td>
+=======
+                <td class="text-nowrap"><a ui-sref="points-detail({id:points.id})">{{points.date | date:'mediumDate'}}</a></td>
+>>>>>>> 2d1e8ac080ae0bd6e5ee9bf2d55f1453adc92513
                 <td class="text-center">
                     <i class="glyphicon" ng-class="{'glyphicon-ok text-success': points.exercise,
                                                         'glyphicon-remove text-danger': !points.exercise}"></i>
@@ -54,8 +80,13 @@
                                                         'glyphicon-remove text-danger': !points.meals}"></i>
                 </td>
                 <td class="text-center">
+<<<<<<< HEAD
                     <i class="glyphicon" ng-class="{'glyphicon-ok text-success': points.alcolhol,
                                                         'glyphicon-remove text-danger': !points.alcolhol}"></i>
+=======
+                    <i class="glyphicon" ng-class="{'glyphicon-ok text-success': points.alcohol,
+                                                        'glyphicon-remove text-danger': !points.alcohol}"></i>
+>>>>>>> 2d1e8ac080ae0bd6e5ee9bf2d55f1453adc92513
                 </td>
                 <td>
                     <div class="truncate cursor" uib-popover="{{points.notes}}">{{points.notes}}</div>
