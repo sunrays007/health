@@ -4,15 +4,18 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myPointsLabel" data-translate="healthApp.points.home.createOrEditLabel">Create or edit a Points</h4>
+        <h4 class="modal-title" id="myPointsLabel" data-translate="healthApp.points.home.createOrEditLabel">Create or edit Points</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
+
+
         <div class="form-group" ng-show="vm.points.id">
             <label for="id" data-translate="global.field.id">ID</label>
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.points.id" readonly />
         </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="healthApp.points.date" for="field_date">Date</label>
                 <div class="input-group">
@@ -29,12 +32,17 @@
                 </p>
             </div>
         </div>
+        <!--
         <div class="form-group">
             <label class="control-label" data-translate="healthApp.points.exercise" for="field_exercise">Exercise</label>
             <input type="number" class="form-control" name="exercise" id="field_exercise"
                     ng-model="vm.points.exercise"
                     />
         </div>
+
+
+
+
         <div class="form-group">
             <label class="control-label" data-translate="healthApp.points.meals" for="field_meals">Meals</label>
             <input type="number" class="form-control" name="meals" id="field_meals"
@@ -47,6 +55,42 @@
                     ng-model="vm.points.alcolhol"
                     />
         </div>
+
+-->
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="vm.points.exercise" name="exercise" id="field_exercise"
+                           ng-true-value="1" ng-false-value="0">
+                    <span class="check"></span>
+                    <label data-translate="healthApp.points.exercise" for="field_exercise" class="control-label">Exercise</label>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="vm.points.meals" name="meals" id="field_meals"
+                           ng-true-value="1" ng-false-value="0">
+                    <span class="check"></span>
+                    <label data-translate="healthApp.points.meals" for="field_meals" class="control-label">Meals</label>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="vm.points.alcolhol" name="alcolhol" id="field_alcolhol"
+                           ng-true-value="0" ng-false-value="1">
+                    <span class="check"></span>
+                    <label data-translate="healthApp.points.alcolhol" for="field_alcolhol" class="control-label">Alcolhol</label>
+                </label>
+            </div>
+        </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="healthApp.points.notes" for="field_notes">Notes</label>
             <input type="text" class="form-control" name="notes" id="field_notes"

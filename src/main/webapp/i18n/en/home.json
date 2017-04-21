@@ -1,11 +1,11 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Welcome to Health App - From Kiran!",
         "subtitle": "This is your homepage",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
-        "question": "If you have any question on JHipster:",
+        "question": "If you have any questions on this Health App reach me at Kiran.Karnati@cardinalhealth.com",
         "link": {
             "homepage": "JHipster homepage",
             "stackoverflow": "JHipster on Stack Overflow",
@@ -13,7 +13,7 @@
             "chat": "JHipster public chat room",
             "follow": "follow @java_hipster on Twitter"
         },
-        "like": "If you like JHipster, don't forget to give us a star on",
+        "like": "If you like to have the source code for this app, you can download from ",
         "github": "GitHub"
     }
 }
